@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Contains \Drupal\on_delete_event\EventSubscriber\MyEventSubscriberXyz.
+ * I named the file as 'MyEventSubscriberXyz' to show that this part of the name
+ * has no relation to anything as long as it conforms with the naming standard
+ */
+
+// Declare the namespace for our own event subscriber.
+namespace Drupal\on_delete_event\EventSubscriber;
+
+// This is the interface that we are implementing.
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+ 

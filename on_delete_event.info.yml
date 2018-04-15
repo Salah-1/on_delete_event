@@ -1,0 +1,6 @@
+name: On Delete Event    
+description: A module that will subscribe to Drupal event system and be notified when a row is deleted.
+package: Custom
+
+type: module
+core: 8.x
