@@ -21,8 +21,12 @@ According to Drupal 8 docs on events, we are suppose to do three(3) things:
 ## Registering event subscribers
 
 I. Define a service in your module, tagged with 'event_subscriber' (see the Services topic for instructions). 
-II. Define a class for your subscriber service that implements \Symfony\Component\EventDispatcher\EventSubscriberInterface 
-III. In your class, the getSubscribedEvents method returns a list of the events this class is subscribed to, and which methods on the class should be called for each one. Example: 
+
+II. Define a class for your subscriber service that implements \Symfony\Component\EventDispatcher\EventSubscriberInterface.
+
+III. In your class, the getSubscribedEvents method returns a list of the events this class is subscribed to, and which methods on the class should be called for 
+each one. Example: 
+
 So, lets do those 3 things now in our module(on_delete_event).
 Indentation is two spaces (you may get drupal white screen error if not indented properly)
 I.  services:
