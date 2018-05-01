@@ -1,3 +1,5 @@
+<?php
+
 /**
  * @file
  * Contains \Drupal\on_delete_event\EventSubscriber\MyClassWhateverNamexyz.
@@ -25,10 +27,12 @@ class MyClassWhateverNamexyz implements EventSubscriberInterface {
    * Code fired on when the subscribed event happens 
    */
   public function ourResponseMethod(MigrateRowDeleteEvent $event) {
-    // The RESPONSE event occurs once a response was created for replying to a request.
-    // For example you could override or add extra HTTP headers in here
-    $response = $event->getResponse();
-    $response->headers->set('X-Custom-Header', 'MyValue');
+    // For now simply set message
+    // To do for the future is to log something in watchdog or sent email!
+    if ($event) {
+     drupal_set_message($this
+      ->t('Looks like the on_delete_event subscription worked'), 'status');
+  }
   }
 
   /**
