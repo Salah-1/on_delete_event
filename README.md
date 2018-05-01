@@ -1,8 +1,14 @@
 *work in progress/ still working on this*
+* to 
 ## Background:
 	Drupal 8 fires events which modules can react to.
 	See the background info on: 
 	https://api.drupal.org/api/drupal/core!core.api.php/group/events/8.2.x
+
+### To test it 
+-Enable the module
+- Create and delete some node/record
+- Then our event should be notified	
 
 ### About our module:
 Our module name: **on_delete_event**.
