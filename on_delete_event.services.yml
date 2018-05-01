@@ -1,5 +1,5 @@
 services:
   on_delete_event.subscriber:
-    class:  'Drupal\on_delete_event\EventSubscriber\MyEventSubscriberXyz'
+    class:  'Drupal\on_delete_event\EventSubscriber\MyClassWhateverNamexyz'
     tags:
       - { name: 'event_subscriber' }

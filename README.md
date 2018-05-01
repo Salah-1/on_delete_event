@@ -14,10 +14,16 @@ Our module name: **on_delete_event**.
 Our module takes action when the above named drupal event happens. 
 Name of the module:  *on_delete_event*
 
-#### This is our file hierarchy
-x
-y
-x
+#### Below is what the directory structure looks like for our d8 module.
+/on_delete_event → (module name)
+ 	-on_delete_event.info.yml
+ 	-on_delete_event.module
+ 	-on_delete_event.services.yml
+ 	-README.md
+ 	-src
+ 	  -EventSubscriber/
+ 	  	-MyClassWhateverNamexyz   ← class that implements the interface...
+
 
 According to Drupal 8 docs on events, we are suppose to do three(3) things:
 
@@ -34,8 +40,20 @@ each one. Example:
 
 *Indentation* is two spaces (you may get drupal white screen error if not indented properly).
 
-I.  services see (on_delete_event.services.yml):
+I.  services  (on_delete_event.services.yml):
+
        on_delete_event.subscriber:
            class:  'Drupal\on_delete_event\EventSubscriber\OnDeleteEvent'
           tags:
              - { name: 'event_subscriber' }
+
+    ####  Important things to note: 
+            next to class(above) naming convention goes like this:
+            Drupal\YourModuleName\EventSubscriber\NameOfClass
+            which contain your implementation of 
+            \Symfony\Component\EventDispatcher\EventSubscriberInterface
+            # see the docs at: https://api.drupal.org/api/examples/events_example%21src%21EventSubscriber%21EventsExampleSubscriber.php/class/EventsExampleSubscriber/8.x-1.x
+
+
+II. Next, we define the class that implements
+	\Symfony\Component\EventDispatcher\EventSubscriberInterface
