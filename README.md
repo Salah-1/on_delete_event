@@ -13,7 +13,7 @@ Module name: **on_delete_event**.
 	*const POST_ROW_DELETE = 'migrate.post_row_delete'*
  
 This module takes action when the above named drupal event happens. 
-Name of the module:  *on_delete_event*
+
 
 ### To test it
 - Enable the module
@@ -22,15 +22,16 @@ Name of the module:  *on_delete_event*
 
 
 #### Below is what the directory structure looks like for our d8 module.
+```
 /on_delete_event → (module name)
- 	-on_delete_event.info.yml
- 	-on_delete_event.module
- 	-on_delete_event.services.yml
- 	-README.md
- 	-src
- 	  -EventSubscriber/
- 	  	-MyClassWhateverNamexyz   ← class that implements the interface...
-
+ 	- on_delete_event.info.yml
+ 	- on_delete_event.module
+ 	- on_delete_event.services.yml
+ 	- README.md
+ 	- src
+ 	  - EventSubscriber/
+ 	  	- MyClassWhateverNamexyz   ← class that implements the interface...
+```
 
 According to Drupal 8 docs on events, we are suppose to do three(3) things:
 
