@@ -1,23 +1,24 @@
 *work in progress/ still working on this*
-* to 
-## Background:
+
+This module reacts to and listens to Drupal 8 events described below. 
+### Background:
 	Drupal 8 fires events which modules can react to.
 	See the background info on: 
 	https://api.drupal.org/api/drupal/core!core.api.php/group/events/8.2.x
 
 ### To test it 
--Enable the module
+- Enable the module
 - Create and delete some node/record
 - Then our event should be notified	
 
-### About our module:
-Our module name: **on_delete_event**.
+### About the  module:
+Module name: **on_delete_event**.
 
  It’s suppose to listen to drupal events. It subscribes to the below event:
 
 	*const POST_ROW_DELETE = 'migrate.post_row_delete'*
  
-Our module takes action when the above named drupal event happens. 
+This module takes action when the above named drupal event happens. 
 Name of the module:  *on_delete_event*
 
 #### Below is what the directory structure looks like for our d8 module.

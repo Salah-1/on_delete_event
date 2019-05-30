@@ -12,13 +12,17 @@
 namespace Drupal\on_delete_event\EventSubscriber;
 
 // This is the interface that we are implementing.
+use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
 * Following is needed as method parameter becuase
 * the event listener method receives an instance of it (see ourResponseMethod)
 */
+use Drupal\migrate;
+//suse Drupal\migrate\Event;
 use Drupal\migrate\Event\MigrateRowDeleteEvent;
+
 
  
 class MyClassWhateverNamexyz implements EventSubscriberInterface {
@@ -32,6 +36,8 @@ class MyClassWhateverNamexyz implements EventSubscriberInterface {
     if ($event) {
      drupal_set_message($this
       ->t('Looks like the on_delete_event subscription worked'), 'status');
+
+      \Drupal::logger('on_delete_event')->notice("Just, fired the on_delete_event event");
   }
   }
 
@@ -40,7 +46,7 @@ class MyClassWhateverNamexyz implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() {
     // For this example I am using KernelEvents constants (see below a full list).
-    $events[MigrateEvents::POST_ROW_DELETE][] = ['ourResponseMethod'];
+    $events[MigrateEvents::POST_ROW_DELETE] = ['ourResponseMethod'];
     return $events;
   }
 
