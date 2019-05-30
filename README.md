@@ -1,15 +1,9 @@
-*work in progress/ still working on this*
-
 This module reacts to and listens to Drupal 8 events described below. 
 ### Background:
 	Drupal 8 fires events which modules can react to.
 	See the background info on: 
 	https://api.drupal.org/api/drupal/core!core.api.php/group/events/8.2.x
 
-### To test it 
-- Enable the module
-- Create and delete some node/record
-- Then our event should be notified	
 
 ### About the  module:
 Module name: **on_delete_event**.
@@ -20,6 +14,12 @@ Module name: **on_delete_event**.
  
 This module takes action when the above named drupal event happens. 
 Name of the module:  *on_delete_event*
+
+### To test it
+- Enable the module
+- Create and delete some node/record
+- Then our event should be notified   
+
 
 #### Below is what the directory structure looks like for our d8 module.
 /on_delete_event → (module name)
@@ -64,3 +64,5 @@ I.  services  (on_delete_event.services.yml):
 
 II. Next, we define the class that implements
 	\Symfony\Component\EventDispatcher\EventSubscriberInterface
+
+* Work in progress/ Still working on this*
