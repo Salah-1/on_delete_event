@@ -13,16 +13,6 @@ Module name: **on_delete_event**.
 	*const POST_ROW_DELETE = 'migrate.post_row_delete'*
  
 This module takes action when the above named drupal event happens. 
-<<<<<<< HEAD
-
-
-### To test it
-- Enable the module
-- Create and delete some node/record
-- Then the event should be notified   
-
-=======
-
 
 ### To test it
 - Enable the module
@@ -54,7 +44,6 @@ each one. Example:
 
 **So, lets do those 3 things now in our module(on_delete_event)**.
 
-*Indentation* is two spaces (you may get drupal white screen error if not indented properly).
 
 I.  services  (on_delete_event.services.yml):
 
@@ -71,7 +60,8 @@ I.  services  (on_delete_event.services.yml):
             # see the docs at: https://api.drupal.org/api/examples/events_example%21src%21EventSubscriber%21EventsExampleSubscriber.php/class/EventsExampleSubscriber/8.x-1.x
 
 
-II. Next, we define the class that implements
+II. Next, define the class that implements
 	\Symfony\Component\EventDispatcher\EventSubscriberInterface
+III. Inject the service inside the Controller	
 
 * Work in progress/ Still working on this*
