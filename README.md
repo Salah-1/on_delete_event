@@ -29,20 +29,6 @@ This module takes action when the above named drupal event happens.
 - Create and delete some node/record
 - Then our event should be notified   
 
-
-#### Below is what the directory structure looks like for our d8 module.
-```
-/on_delete_event → (module name)
- 	- on_delete_event.info.yml
- 	- on_delete_event.module
- 	- on_delete_event.services.yml
- 	- README.md
- 	- src
- 	  - EventSubscriber/
- 	  	- MyClassWhateverNamexyz   ← class that implements the interface...
-```
->>>>>>> 733e867ef692687351741638d12c1fa1b0363dd9
-
 #### Below is what the directory structure looks like for this d8 module.
 ```
 /on_delete_event → (module name)
