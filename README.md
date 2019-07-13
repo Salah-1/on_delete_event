@@ -61,7 +61,9 @@ I.  services  (on_delete_event.services.yml):
 
 
 II. Next, define the class that implements
-	\Symfony\Component\EventDispatcher\EventSubscriberInterface
-III. Inject the service inside the Controller	
+	\Symfony\Component\EventDispatcher\EventSubscriberInterface.
+
+III. Inject the service inside the Controller.
+	
 
 * Work in progress/ Still working on this*
